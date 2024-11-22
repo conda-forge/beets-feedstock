@@ -33,7 +33,30 @@ requirements:
     - colorama
     - typing-extensions
     - platformdirs >=3.5.0
-
+  run_constrained:
+    - beautifulsoup4 *
+    - dbus-python *
+    - flask *
+    - flask-cors *
+    - langdetect *
+    - librosa >=0.10.2,<0.10.3
+    - mutagen >=1.33
+    - Pillow *
+    - py7zr *
+    - pyacoustid *
+    - PyGObject *
+    - pylast *
+    - python-mpd2 >=0.4.2
+    - python3-discogs-client >=2.3.15
+    - pyxdg *
+    - rarfile *
+    - reflink *
+    - requests *
+    - resampy >=0.4.3
+    - requests-oauthlib >=0.6.1
+    - soco *
+    - pydata-sphinx-theme *
+    - sphinx *
 test:
   imports:
     - beets
