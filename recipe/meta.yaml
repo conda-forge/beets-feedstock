@@ -14,7 +14,7 @@ build:
     - beet = beets.ui:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -75,7 +75,11 @@ about:
   license_file: LICENSE
   dev_url: https://github.com/beetbox/beets
   doc_url: https://beets.readthedocs.io/
-
+  description: |
+    Beets is the media library management system for obsessive music geeks.
+    The purpose of beets is to get your music collection right once and for all. 
+    It catalogs your collection, automatically improving its metadata as it goes. 
+    It then provides a bouquet of tools for manipulating and accessing your music.
 
 extra:
   recipe-maintainers:
