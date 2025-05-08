@@ -33,6 +33,8 @@ requirements:
     - colorama
     - typing-extensions
     - platformdirs >=3.5.0
+    - numpy >=1.24.4
+    - lap >=0.5.12
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
