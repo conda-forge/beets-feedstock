@@ -1,5 +1,5 @@
 {% set name = "beets" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
-  sha256: cc0a277f530844575e3374021f316da16bf78ed514963c1ab1597168a8d4c715
+  sha256: b24fc7949af502601774f907ebed1998f9adf411ec8df1123a1fc3f334b63102
 
 build:
   entry_points:
     - beet = beets.ui:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -33,6 +33,8 @@ requirements:
     - colorama
     - typing-extensions
     - platformdirs >=3.5.0
+    - numpy >=1.24.4
+    - lap >=0.5.12
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
