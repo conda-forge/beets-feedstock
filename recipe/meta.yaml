@@ -1,5 +1,5 @@
 {% set name = "beets" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
-  sha256: b24fc7949af502601774f907ebed1998f9adf411ec8df1123a1fc3f334b63102
+  sha256: 87598721a14af89a06d5ad3d9e8138f8ac112510271a981a90b840ed784d5712
 
 build:
   entry_points:
