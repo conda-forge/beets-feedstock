@@ -1,5 +1,5 @@
 {% set name = "beets" %}
-{% set version = "2.3.1" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
-  sha256: 87598721a14af89a06d5ad3d9e8138f8ac112510271a981a90b840ed784d5712
+  sha256: c5897e7b018fbeaf02a9c50b93e338a4f4e854ed8321471be690a7746be03efa
 
 build:
   entry_points:
@@ -23,25 +23,24 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0
-    - unidecode >=1.3.6
-    - musicbrainzngs >=0.4
-    - pyyaml
-    - mediafile >=0.12.0
-    - confuse >=1.5.0
-    - munkres >=1.0.0
-    - jellyfish
     - colorama
-    - typing-extensions
-    - platformdirs >=3.5.0
-    - numpy >=1.24.4
+    - confuse >=1.5.0
+    - jellyfish
     - lap >=0.5.12
+    - mediafile >=0.12.0
+    - musicbrainzngs >=0.4
+    - numpy >=1.24.4
+    - platformdirs >=3.5.0
+    - pyyaml
+    - typing_extensions
+    - unidecode >=1.3.6
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
     - flask *
     - flask-cors *
     - langdetect *
-    - librosa >=0.10.2,<0.10.3
+    - librosa >=0.10.2.post1,<0.11.0
     - mutagen >=1.33
     - Pillow *
     - py7zr *
