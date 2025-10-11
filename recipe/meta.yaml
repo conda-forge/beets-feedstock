@@ -1,5 +1,5 @@
 {% set name = "beets" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,20 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
-  sha256: c5897e7b018fbeaf02a9c50b93e338a4f4e854ed8321471be690a7746be03efa
+  sha256: 7f12cce3d5c3bfd68144407e86ae7fbaada6dc41676a49ab42027e156bdcfb73
 
 build:
   entry_points:
     - beet = beets.ui:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - poetry-core
+    - poetry-dynamic-versioning >=1.0.0,<2.0.0
     - pip
   run:
     - python >={{ python_min }},<4.0
