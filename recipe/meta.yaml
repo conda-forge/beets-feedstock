@@ -77,7 +77,7 @@ test:
     - beet --help
   requires:
     - pip
-    - python {{ python_min }}
+    - python
 
 about:
   home: https://beets.io/
