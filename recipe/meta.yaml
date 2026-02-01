@@ -22,7 +22,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python >=3.10,<4
+    - python
     - colorama
     - confuse >=2.1.0
     - jellyfish
@@ -39,7 +39,7 @@ requirements:
     - scipy >=1.13.1  # [py<313]
     - scipy >=1.16.1  # [py>=313]
     - numba >=0.60  # [py<313]
-    - numba >=0.62.1 # [py>=313]
+    - numba >=0.62.1  # [py>=313]
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
