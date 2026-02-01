@@ -40,6 +40,7 @@ requirements:
     - scipy >=1.16.1  # [py>=313]
     - numba >=0.60  # [py<313]
     - numba >=0.62.1  # [py>=313]
+    - packaging  # [py>=313]
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
