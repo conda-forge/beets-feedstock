@@ -1,5 +1,5 @@
 {% set name = "beets" %}
-{% set version = "2.6.0" %}
+{% set version = "2.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
-  sha256: 9ca4a34a9aac0ccf36f3d80a96a92d037978c1bbf7231af28a899447f7abb651
+  sha256: 1376b992ee18ee1b5de08d3586625e78d4338edb6b47e24f8e74932d8551f672
 
 build:
   entry_points:
     - beet = beets.ui:main
   skip: true  # [py>=400]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -33,6 +33,7 @@ requirements:
     - mediafile >=0.12.0
     - numpy >=2.0.2  # [py<313]
     - numpy >=2.3.4  # [py>=313]
+    - packaging >=24.0
     - platformdirs >=3.5.0
     - pyyaml
     - requests >=2.32.5
@@ -43,7 +44,6 @@ requirements:
     - scipy >=1.16.1  # [py>=313]
     - numba >=0.60  # [py<313]
     - numba >=0.62.1  # [py>=313]
-    - packaging  # [py>=313]
   run_constrained:
     - beautifulsoup4 *
     - dbus-python *
