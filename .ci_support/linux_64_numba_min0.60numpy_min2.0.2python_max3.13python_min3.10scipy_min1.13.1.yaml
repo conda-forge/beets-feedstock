@@ -1,0 +1,22 @@
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+docker_image:
+- quay.io/condaforge/linux-anvil-x86_64:alma9
+numba_min:
+- '0.60'
+numpy_min:
+- 2.0.2
+python_max:
+- '3.13'
+python_min:
+- '3.10'
+scipy_min:
+- 1.13.1
+zip_keys:
+- - python_min
+  - python_max
+  - scipy_min
+  - numba_min
+  - numpy_min

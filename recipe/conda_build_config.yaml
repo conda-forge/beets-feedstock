@@ -1,0 +1,22 @@
+python_min:
+ - "3.10"
+ - "3.13"
+python_max:
+ - "3.13"
+ - "4.0"
+scipy_min:
+ - "1.13.1"
+ - "1.16.1"
+numba_min:
+ - "0.60"
+ - "0.62.1"
+numpy_min:
+ - "2.0.2"
+ - "2.3.4"
+zip_keys:
+ - python_min
+ - python_max
+ - scipy_min
+ - numba_min
+ - numpy_min
+ 
