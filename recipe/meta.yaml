@@ -21,7 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - poetry-core
-    - pip {{ pip_version }}
+    - pip
   run:
     - python >={{ python_min }},<{{ python_max }}
     - colorama
