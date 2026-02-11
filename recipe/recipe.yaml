@@ -1,35 +1,39 @@
-{% set name = "beets" %}
-{% set version = "2.6.1" %}
+schema_version: 1
+
+context:
+  name: beets
+  version: 2.6.1
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/beets-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/beets-${{ version }}.tar.gz
   sha256: 1376b992ee18ee1b5de08d3586625e78d4338edb6b47e24f8e74932d8551f672
 
 build:
-  entry_points:
-    - beet = beets.ui:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
+  string: python_min${{ python_min }}_pyh${{ PKG_HASH }}_${{ PKG_BUILDNUM }}
   noarch: python
-  string: "python_min{{ python_min }}_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - beet = beets.ui:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - poetry-core
     - pip
   run:
-    - python >={{ python_min }},<{{ python_max }}
+    - python >=${{ python_min }},<${{ python_max }}
     - colorama
     - confuse >=2.1.0
     - jellyfish
     - lap >=0.5.12
     - mediafile >=0.12.0
-    - numpy >={{ numpy_min }}
+    - numpy >=${{ numpy_min }}
     - packaging >=24.0
     - platformdirs >=3.5.0
     - pyyaml
@@ -37,9 +41,9 @@ requirements:
     - requests-ratelimiter >=0.7.0
     - typing_extensions
     - unidecode >=1.3.6
-    - scipy >={{ scipy_min }}
-    - numba >={{ numba_min }}
-  run_constrained:
+    - scipy >=${{ scipy_min }}
+    - numba >=${{ numba_min }}
+  run_constraints:
     - beautifulsoup4 *
     - dbus-python *
     - flask *
@@ -67,29 +71,34 @@ requirements:
     - sphinx-copybutton >=0.5.2
     - sphinx-toolbox >=4.1.0
     - titlecase >=2.4.1,<3.0.0
-test:
-  imports:
-    - beets
-    - beetsplug
-  commands:
-    - pip check
-    - beet --help
-  requires:
-    - pip
-    - python {{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - beets
+        - beetsplug
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+      - beet --help
 
 about:
-  home: https://beets.io/
   summary: music tagger and library organizer
   license: MIT
   license_file: LICENSE
-  dev_url: https://github.com/beetbox/beets
-  doc_url: https://beets.readthedocs.io/
   description: |
     Beets is the media library management system for obsessive music geeks.
-    The purpose of beets is to get your music collection right once and for all. 
-    It catalogs your collection, automatically improving its metadata as it goes. 
+    The purpose of beets is to get your music collection right once and for all.
+    It catalogs your collection, automatically improving its metadata as it goes.
     It then provides a bouquet of tools for manipulating and accessing your music.
+
+
+  homepage: https://beets.io/
+  repository: https://github.com/beetbox/beets
+  documentation: https://beets.readthedocs.io/
 
 extra:
   recipe-maintainers:

@@ -18,7 +18,6 @@ The purpose of beets is to get your music collection right once and for all.
 It catalogs your collection, automatically improving its metadata as it goes.
 It then provides a bouquet of tools for manipulating and accessing your music.
 
-
 Current build status
 ====================
 

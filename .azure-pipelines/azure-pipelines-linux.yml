@@ -8,12 +8,12 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1:
-        CONFIG: linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1
+      linux_64_numba_min0.60numpy_min2.0.2pyminversionpymin310python_max3.13python_min3.10scipy_min1.13.1:
+        CONFIG: linux_64_numba_min0.60numpy_min2.0.2pyminversionpymin310python_max3.13python_min3.10scipy_min1.13.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1:
-        CONFIG: linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1
+      linux_64_numba_min0.62.1numpy_min2.3.4pyminversionpymin313python_max4.0python_min3.13scipy_min1.16.1:
+        CONFIG: linux_64_numba_min0.62.1numpy_min2.3.4pyminversionpymin313python_max4.0python_min3.13scipy_min1.16.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
