@@ -13,9 +13,13 @@ numba_min:
 numpy_min:
  - "2.0.2"
  - "2.3.4"
+pyminversion:
+ - pymin310
+ - pymin313
 zip_keys:
  - python_min
  - python_max
  - scipy_min
  - numba_min
  - numpy_min
+ - pyminversion
