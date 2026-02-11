@@ -14,7 +14,7 @@ source:
 
 build:
   number: 3
-  string: ${{ pyminversion }}_pyh${{ PKG_HASH }}_${{ PKG_BUILDNUM }}
+  string: python_min${{ python_min }}_pyh${{ PKG_HASH }}_${{ PKG_BUILDNUM }}
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
