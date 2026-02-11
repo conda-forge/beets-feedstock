@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: beets
   version: 2.6.1
+  build_number: 4
 
 package:
   name: ${{ name|lower }}
@@ -13,8 +14,8 @@ source:
   sha256: 1376b992ee18ee1b5de08d3586625e78d4338edb6b47e24f8e74932d8551f672
 
 build:
-  number: 3
-  string: python_min${{ python_min }}_pyh${{ PKG_HASH }}_${{ PKG_BUILDNUM }}
+  number: ${{ build_number }}
+  string: python_min${{ python_min }}_pyh${{ hash }}_${{ build_number }}
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:

@@ -8,8 +8,6 @@ numba_min:
 - '0.60'
 numpy_min:
 - 2.0.2
-pyminversion:
-- pymin310
 python_max:
 - '3.13'
 python_min:
@@ -22,4 +20,3 @@ zip_keys:
   - scipy_min
   - numba_min
   - numpy_min
-  - pyminversion
