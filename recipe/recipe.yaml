@@ -30,7 +30,7 @@ requirements:
   run:
     - python >=${{ python_min }},<${{ python_max }}
     - colorama
-    - confuse >=2.1.0
+    - confuse >=2.2.0
     - jellyfish
     - lap >=0.5.12
     - mediafile >=0.12.0
