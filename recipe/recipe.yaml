@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: beets
-  version: "2.7.0"
+  version: "2.7.1"
   build_number: 0
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/beets-${{ version }}.tar.gz
-  sha256: 129f315810e381e0dbb4236fb3fa59bf0af79fdf5c2d4844b4586ac08ec25a72
+  sha256: 95f20c4087be2f4b2ab400be07cbea380bec2720e2a83180b025a972ee94bd22
 
 build:
   number: ${{ build_number }}
