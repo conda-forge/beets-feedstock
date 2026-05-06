@@ -33,7 +33,7 @@ requirements:
     - confuse >=2.2.0
     - jellyfish
     - lap >=0.5.12
-    - mediafile >=0.12.0
+    - mediafile >=0.16.2
     - numpy >=${{ numpy_min }}
     - packaging >=24.0
     - platformdirs >=3.5.0
