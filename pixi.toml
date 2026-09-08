@@ -37,24 +37,24 @@ description = "List contents of all packages found in rattler-build build direct
 [feature.build.tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build beets-feedstock directly (without setup scripts), no particular variant specified"
-[feature.build.tasks."build-linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1.yaml "
-description = "Build beets-feedstock with variant linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1.yaml "
-description = "Debug beets-feedstock with variant linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1.yaml"
-description = "List contents of beets-feedstock packages built for variant linux_64_numba_min0.60numpy_min2.0.2python_max3.13python_min3.10scipy_min1.13.1"
-[feature.build.tasks."build-linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1.yaml "
-description = "Build beets-feedstock with variant linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1.yaml "
-description = "Debug beets-feedstock with variant linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1.yaml"
-description = "List contents of beets-feedstock packages built for variant linux_64_numba_min0.62.1numpy_min2.3.4python_max4.0python_min3.13scipy_min1.16.1"
+[feature.build.tasks."build-linux_64_numpy_min2.0.2python_max3.13python_min3.10"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numpy_min2.0.2python_max3.13python_min3.10.yaml "
+description = "Build beets-feedstock with variant linux_64_numpy_min2.0.2python_max3.13python_min3.10 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_numpy_min2.0.2python_max3.13python_min3.10"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_numpy_min2.0.2python_max3.13python_min3.10.yaml "
+description = "Debug beets-feedstock with variant linux_64_numpy_min2.0.2python_max3.13python_min3.10 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_numpy_min2.0.2python_max3.13python_min3.10"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numpy_min2.0.2python_max3.13python_min3.10.yaml"
+description = "List contents of beets-feedstock packages built for variant linux_64_numpy_min2.0.2python_max3.13python_min3.10"
+[feature.build.tasks."build-linux_64_numpy_min2.3.5python_max3.15python_min3.13"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_numpy_min2.3.5python_max3.15python_min3.13.yaml "
+description = "Build beets-feedstock with variant linux_64_numpy_min2.3.5python_max3.15python_min3.13 directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_numpy_min2.3.5python_max3.15python_min3.13"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_numpy_min2.3.5python_max3.15python_min3.13.yaml "
+description = "Debug beets-feedstock with variant linux_64_numpy_min2.3.5python_max3.15python_min3.13 directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_numpy_min2.3.5python_max3.15python_min3.13"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_numpy_min2.3.5python_max3.15python_min3.13.yaml"
+description = "List contents of beets-feedstock packages built for variant linux_64_numpy_min2.3.5python_max3.15python_min3.13"
 
 [environments]
 build = ["build"]

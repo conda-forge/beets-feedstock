@@ -13,4 +13,5 @@ python_max:
 numpy_min:
  - 2.0.2
  - 2.3.5
-zip_keys: [[python_min, python_max, scipy_min, numba_min, numpy_min]]
+#zip_keys: [[python_min, python_max, scipy_min, numba_min, numpy_min]]
+zip_keys: [[python_min, python_max, numpy_min]]
